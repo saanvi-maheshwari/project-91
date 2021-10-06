@@ -13,14 +13,16 @@ document.getElementById("p2_name").innerHTML = get_p2;
 document.getElementById("QT").innerHTML = "Question Turn - " + get_p1;
 document.getElementById("AT").innerHTML = "Answer Turn - " + get_p2;
 
-function send_num(){
+function send(){
     number1 = document.getElementById("no1_input").value;
     number2 = document.getElementById("no2_input").value;
     actual_answer = parseInt(number1) * parseInt(number2);
 
     question_number = "<h4>" + number1+ " X "+ number2 +"</h4>";
     input_box = "<br>Answer : <input type='text' id='input_check_box";  
-    check_button = "<br><br><button class='btn btn-info' onclick='check()'>Check</button>;
+    check_button = "<br><br><button class='btn btn-info' onclick='check()'>Check</button>;"
 
-
-}
+    document.getElementById("output").innerHTML = row;
+    document.getElementById("number1").value = "";
+    document.getElementById("number2").value = "";
+} 
